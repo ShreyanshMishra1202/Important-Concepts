@@ -7,6 +7,6 @@ public class Start_Hashmap {
         hm.put("USA",50);
         System.out.println(hm);
         hm.put("India", 120);
-        System.out.println(hm);
+        System.out.println(hm);//updates
     }
 }
