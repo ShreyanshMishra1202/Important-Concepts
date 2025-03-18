@@ -1,0 +1,22 @@
+Hashmaps are stored as Array of Linked Lists
+
+[1] put(key,value);
+[2] hash f(x) ------> gives BUCKET INDEX
+[3] loop Linked List in bucket to check if key is present
+        * if found ----> updates value of key
+        * if not -----> add new node to Linked List
+[4] hash function gives that key is present at which index of array {it does it in O(1) complexity }
+[5] we divide all nodes among array to have equal number of nodes at each index of array
+        if N (length of array) = 4,
+           n (no. of linked list nodes) = 7
+        then, Lambda =n/m = 7/4 =1.75
+        therefore, it is searched in O(1.75) complexity
+
+        lambda <= k(constant threshold value)
+
+Hence, it is done in Constant time complexity
+
+if lambda reaches the value of k, we do rehashing
+
+FOR REHASHING,
+[1] we will create a new array of length double of old array
