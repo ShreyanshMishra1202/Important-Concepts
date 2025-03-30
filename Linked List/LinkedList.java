@@ -6,6 +6,10 @@ public class LinkedList{
             this.data=data;
             this.next=null;
         }
+        public Node(int data,Node next){
+            this.data=data;
+            this.next=next;
+        }
     }
     public static Node head;
     public static Node tail;
@@ -155,6 +159,20 @@ public class LinkedList{
         return helper(head, key);
     }
 
+    public void insert_rec(int val,int index){
+        head=insert_rec(val, index,head);
+    }
+    private Node insert_rec(int val,int index,Node node){
+        if(index==0){
+            Node temp=new Node(val,node);
+            size++;
+            return temp;
+        }
+        node.next=insert_rec(val, index--, node.next);
+        return node;
+    }
+
+    
     public static void main(String[] args) {
         LinkedList ll=new LinkedList();
         ll.print();
@@ -169,6 +187,7 @@ public class LinkedList{
         ll.addLast(5);
         ll.print();
         ll.addLast(6);
+        ll.insert_rec(67, 2);
         ll.print();
         // Now, we will add data at any middle index
         ll.add(3,99);
