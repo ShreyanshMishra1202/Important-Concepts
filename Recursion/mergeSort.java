@@ -1,11 +1,9 @@
-
-import java.lang.reflect.Array;
-
+import java.util.*;
 public class mergeSort {
     public static void main(String[] args) {
         int arr[]={1,2,3,2,8,4,78,32};
         int y=arr.length;
-        System.out.println(Array.toString(sorting(arr,0,y)));
+        System.out.println(Arrays.toString(sorting(arr,0,y)));
     }
     public static int[] sorting(int arr[],int s,int e){
         if(e-s==1){

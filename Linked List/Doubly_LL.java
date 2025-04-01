@@ -8,6 +8,11 @@ public class Doubly_LL{
             this.next=next;
             this.prev=prev;
         }
+        public Node(int val,Node prev,Node next){
+            this.val=val;
+            this.next=next;
+            this.prev=prev;
+        }
     }
     public static Node head;
     public static Node tail;
@@ -126,6 +131,21 @@ public class Doubly_LL{
         }
         System.out.println("START");
     }
+
+    public void insert_rec(int val,int index){
+        head=insert_rec(val, index,head);
+    }
+    private Node insert_rec(int val, int index, Node node){
+        if(index==1){
+            Node temp=new Node(val,node,node.next);
+            node.next.prev=temp;
+            size++;
+            return temp;
+        }
+        node.next.next=insert_rec(val, index-1, node.next);
+        return node;
+    }
+
     public static void main(String[] args) {
         Doubly_LL dl=new Doubly_LL();
         
@@ -137,6 +157,8 @@ public class Doubly_LL{
         dl.addlast(8);
         dl.add_middle(5, 4);
         dl.add_middle(6, 5);
+        dl.display_forward();
+        dl.insert_rec(67,2);
         dl.display_forward();
         dl.display_reverse();
         System.out.println("Size of Doubly Linked List = "+dl.size);

@@ -169,7 +169,7 @@ public class LinkedList{
             size++;
             return temp;
         }
-        node.next=insert_rec(val, index--, node.next);
+        node.next=insert_rec(val, index-1, node.next);
         return node;
     }
 
