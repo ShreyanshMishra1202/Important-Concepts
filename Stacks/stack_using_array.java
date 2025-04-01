@@ -1,4 +1,6 @@
-public class Stacking {
+package Stacks;
+
+public class stack_using_array {
     public static void main(String[] args) {
         Stack s=new Stack();
         s.push(1);

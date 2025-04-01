@@ -1,6 +1,7 @@
+package Stacks;
 
 import java.util.Stack;
-public class Stacky {
+public class stack_using_collection_framework {
     public static void main(String[] args) {
         Stack<Integer> s=new Stack<>();
         s.push(1);
