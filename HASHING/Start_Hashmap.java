@@ -1,3 +1,5 @@
+package HASHING;
+
 import java.util.HashMap;
 public class Start_Hashmap {
     public static void main(String[] args) {

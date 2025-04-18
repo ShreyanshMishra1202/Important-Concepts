@@ -1,3 +1,5 @@
+package HASHING;
+
 import java.util.HashMap;
 import java.util.Set;
 public class iterate_hashmap {
@@ -16,6 +18,6 @@ public class iterate_hashmap {
         for (String k : keys) {
             System.out.println("Key = "+k+" , Value = "+hm.get(k));
         }
-
+        System.out.println(hm.entrySet());      // it displays set of key-value pair
     }
 }

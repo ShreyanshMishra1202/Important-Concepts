@@ -9,7 +9,7 @@ Hashmaps are stored as Array of Linked Lists
 [5] we divide all nodes among array to have equal number of nodes at each index of array
         if N (length of array) = 4,
            n (no. of linked list nodes) = 7
-        then, Lambda =n/m = 7/4 =1.75
+        then, Lambda =n/N = 7/4 =1.75
         therefore, it is searched in O(1.75) complexity
 
         lambda <= k(constant threshold value)

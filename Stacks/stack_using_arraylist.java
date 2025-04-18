@@ -15,8 +15,8 @@ public class stack_using_arraylist {
             if(isEmpty()){
                 return -1;
             }
-            int top=al.get(al.size()-1);
-            al.remove(al.size()-1);
+            int top=al.getLast();
+            al.removeLast();
             return top;
         }
         public int peek() {
